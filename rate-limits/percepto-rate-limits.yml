@@ -1,0 +1,16 @@
+generated: '2026-08-26'
+method: searched
+source: https://drones.percepto.co/
+limit_count: 0
+rate_limits: []
+headers: []
+note: 'Percepto documents no rate limits. There is no public API reference to read them from: the
+  AIM API schema (https://drones.percepto.co/api/schema/) and API docs
+  (https://drones.percepto.co/api/docs/) both return HTTP 302 to /loginview/ for an anonymous
+  caller, so no limit, window, burst, exhaustion status code or RateLimit-* response header could
+  be observed. An honest zero, and a gap only Percepto can close.'
+evidence:
+- url: https://drones.percepto.co/api/schema/
+  status: 302
+- url: https://drones.percepto.co/api/docs/
+  status: 302

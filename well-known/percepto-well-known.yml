@@ -1,0 +1,63 @@
+generated: '2026-08-26'
+method: probed
+source: live GET of each /.well-known/ path on every Percepto host in apis.yml
+note: 'Every probed path returned HTTP 404 on both hosts. Neither host is a soft-404 catch-all:
+  a control probe of /.well-known/this-should-404-xyz also returned 404 on both, and no path
+  returned a document, so nothing was saved. Per the pipeline contract NO WellKnown and NO
+  SecurityTxt pointer is emitted — this file records a measured absence, not a served surface.'
+hit_count: 0
+hosts:
+- host: https://percepto.co
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  soft_404_control:
+    path: /.well-known/this-should-404-xyz
+    status: 404
+    bytes: 280798
+- host: https://drones.percepto.co
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  soft_404_control:
+    path: /.well-known/this-should-404-xyz
+    status: 404
+    bytes: 10644

@@ -1,23 +1,113 @@
 aid: percepto
 name: Percepto
-description: 'Percepto is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Percepto is an Israeli-founded industrial autonomy company (founded 2014, offices
+  in Modi''in, Israel and the United States) that builds drone-in-a-box hardware and the software
+  that runs it. Its hardware line includes the Percepto Air Max and Air Mobile drones and the
+  Percepto Base docking station, and its software product is Percepto AIM (Autonomous Inspection
+  and Monitoring), a platform that plans and launches autonomous missions, ingests visual, thermal,
+  optical-gas-imaging and 3D data from Percepto drones as well as third-party DJI drones and fixed
+  cameras, and applies AI-driven analytics to produce inspection, monitoring, emergency-response
+  and security insights for oil and gas, mining, electric utilities, solar, ports and heavy
+  industry sites. Percepto holds FAA beyond-visual-line-of-sight (BVLOS) authorizations for
+  automated industrial inspections and has raised approximately $138.6M. The Percepto AIM console
+  is served at drones.percepto.co and exposes an HTTP API under /api/, but the API schema and API
+  documentation routes both redirect anonymous callers to a customer login: Percepto publishes no
+  public developer portal, no OpenAPI document and no public API reference.'
 url: https://raw.githubusercontent.com/api-evangelist/percepto/refs/heads/main/apis.yml
+image: https://percepto.co/wp-content/uploads/2020/11/Percepto-AIM-robotics-illustration.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
-- Company
-apis: []
+- Drones
+- Robotics
+- Industrial Inspection
+- Autonomous Systems
+- Computer Vision
+- Asset Monitoring
+- Energy
+- Oil and Gas
+- Mining
+- Utilities
+- Israel
+apis:
+- name: Percepto AIM API
+  description: 'The HTTP API behind the Percepto AIM (Autonomous Inspection and Monitoring)
+    console at drones.percepto.co. The application is a Django/Django-REST-Framework deployment:
+    /api/schema/ and /api/docs/ are live routes (both HTTP 302 to /loginview/?next=... for an
+    anonymous caller) while sibling paths such as /api/ and /swagger.json return the application
+    404 page, which establishes that an API and a machine-readable schema exist under /api/ but
+    are reachable only by an authenticated Percepto customer. No public OpenAPI, no public
+    reference and no developer portal were found on any Percepto host.'
+  humanURL: https://drones.percepto.co/
+  baseURL: https://drones.percepto.co/api
+  tags:
+  - Drones
+  - Industrial Inspection
+  - Autonomous Systems
+  x-access: customer-only
+  x-base-url-evidence: 'Inferred from two observed live routes under /api/ (GET
+    https://drones.percepto.co/api/schema/ -> 302 Location /loginview/?next=/api/schema/ and GET
+    https://drones.percepto.co/api/docs/ -> 302 Location /loginview/?next=/api/docs/, probed
+    2026-08-26). Percepto publishes no documented base URL; this is not stated by the provider.'
+  properties:
+  - type: Login
+    url: https://drones.percepto.co/loginview/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/percepto-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://percepto.co/
+- type: Blog
+  url: https://percepto.co/blog/
+- type: GitHubOrganization
+  url: https://github.com/perceptoDrones
+- type: Support
+  url: https://percepto.co/contact/
+- type: SignUp
+  url: https://drones.percepto.co/loginview/
+- type: PrivacyPolicy
+  url: https://percepto.co/privacy-policy/
+- type: Compliance
+  url: https://percepto.co/your-drone-inspection-data-is-secure/
+- type: Packages
+  url: packages/percepto-packages.yml
+- type: Conformance
+  url: conformance/percepto-conformance.yml
+- type: Lifecycle
+  url: lifecycle/percepto-lifecycle.yml
+- type: Plans
+  url: plans/percepto-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/percepto-rate-limits.yml
+- type: LLMsTxt
+  url: llms/percepto-llms.txt
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 8
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: 'The Percepto AIM console at drones.percepto.co serves a Django-REST-Framework API whose
+    own schema and docs routes are live but customer-only — GET /api/schema/ and GET /api/docs/
+    each return 302 to /loginview/?next=..., so the machine-readable contract exists and is simply
+    not readable without a Percepto tenant login.'
+  evidence:
+  - url: https://drones.percepto.co/api/schema/
+    status: 302
+  - url: https://drones.percepto.co/api/docs/
+    status: 302
+  - url: https://percepto.co/llms.txt
+    status: 404
+  - url: https://percepto.co/openapi.json
+    status: 404
+  checked: '2026-08-26'

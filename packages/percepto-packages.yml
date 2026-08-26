@@ -1,0 +1,62 @@
+generated: '2026-08-26'
+method: searched
+source: 'npm registry search, PyPI, RubyGems, crates.io, Packagist and the perceptoDrones GitHub
+  organization'
+package_count: 0
+packages: []
+note: 'No first-party Percepto client library or SDK was found in any public package registry.
+  Percepto publishes no developer portal or SDK page, and the AIM API is customer-only, so there is
+  no public client to package.'
+registries_checked:
+- registry: npm
+  query: https://registry.npmjs.org/-/v1/search?text=percepto
+  status: 200
+  result: 0 packages returned
+- registry: pypi
+  query: https://pypi.org/pypi/percepto/json
+  status: 200
+  result: 'name collision, NOT first-party — the PyPI project "percepto" (0.1.dev40, published
+    2026-03-22) is "Universal perception platform for AI agents" by author Luis Condados, unrelated
+    to Percepto Ltd. Deliberately not listed as a package.'
+  version: 0.1.dev40
+  published: '2026-03-22'
+  official: false
+- registry: rubygems
+  query: https://rubygems.org/api/v1/gems/percepto.json
+  status: 404
+  result: absent
+- registry: crates.io
+  query: https://crates.io/api/v1/crates/percepto
+  status: 404
+  result: absent
+- registry: packagist
+  query: https://packagist.org/packages/percepto.json
+  status: 301
+  result: absent
+source_repositories:
+- name: RAW-utility
+  url: https://github.com/perceptoDrones/RAW-utility
+  language: javascript
+  registry: none
+  version: null
+  published: '2017-10-17'
+  official: true
+  archived: true
+  note: 'First-party but NOT an API client — "Play & manipulate RAW video files". Archived;
+    last push 2017-10-17. Never published to a package registry, so there is no version to read.'
+- name: mavlink
+  url: https://github.com/perceptoDrones/mavlink
+  registry: none
+  version: null
+  published: '2024-11-27'
+  official: false
+  note: 'A FORK of the upstream MAVLink marshalling/communication library, not a Percepto
+    package. Recorded for completeness only; not counted as a Percepto SDK.'
+- name: perceptoDrones.github.io
+  url: https://github.com/perceptoDrones/perceptoDrones.github.io
+  registry: none
+  version: null
+  published: '2022-09-04'
+  official: true
+  note: '"Public repository for miscellaneous tools". Not a client library. The GitHub Pages site
+    at perceptodrones.github.io returns HTTP 404.'

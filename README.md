@@ -64,5 +64,18 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Percepto is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Percepto is an Israeli-founded industrial autonomy company (founded 2014; Modi'in, Israel and the
+United States) that builds drone-in-a-box hardware — the Percepto Air Max and Air Mobile drones and
+the Percepto Base docking station — and Percepto AIM (Autonomous Inspection and Monitoring), the
+software that plans and launches autonomous missions, ingests visual, thermal, optical-gas-imaging
+and 3D data from Percepto drones as well as third-party DJI drones and fixed cameras, and applies AI
+analytics for inspection, monitoring, emergency response and security at oil and gas, mining,
+electric utility, solar, port and heavy-industry sites.
+
+Percepto publishes no public API. The Percepto AIM console at `drones.percepto.co` serves an HTTP API
+under `/api/`, but its schema and documentation routes are customer-only — as of 2026-08-26 both
+`/api/schema/` and `/api/docs/` return HTTP 302 to `/loginview/`.
+
+- https://percepto.co/
+- https://drones.percepto.co/
+- https://github.com/perceptoDrones

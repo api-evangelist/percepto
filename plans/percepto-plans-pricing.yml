@@ -1,0 +1,17 @@
+generated: '2026-08-26'
+method: searched
+source: https://percepto.co/
+plan_count: 0
+plans: []
+pricing_model: sales-gated
+note: 'Percepto publishes no pricing page and no plans. https://percepto.co/pricing/ returns HTTP
+  404 and no pricing, plans or tier page appears anywhere in percepto.co/page-sitemap.xml (58
+  pages, reviewed 2026-08-26). Commercial engagement runs through a demo request
+  (https://percepto.co/book-a-demo/, HTTP 200) and a contact form
+  (https://percepto.co/contact/, HTTP 200). No Pricing pointer is emitted because there is no
+  pricing page to point at.'
+evidence:
+- url: https://percepto.co/pricing/
+  status: 404
+- url: https://percepto.co/book-a-demo/
+  status: 200

@@ -1,0 +1,32 @@
+generated: '2026-08-26'
+method: probed
+source: live probes of Percepto hosts + a review of percepto.co/page-sitemap.xml (58 pages)
+note: 'A measured absence. Percepto publishes no API versioning policy, no deprecation policy, no
+  SLA and no operational status page. Per the pipeline contract NO StatusPage and NO Deprecation
+  pointer is emitted from this file.'
+versioning:
+  scheme: null
+  current: null
+  docs: null
+  evidence: 'No public API reference exists to state a versioning scheme. The AIM API namespace
+    observed is /api/ with no version segment; /api/v1/ returns the application 404 page.'
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  evidence: No deprecation or sunset policy found on any Percepto host.
+sla:
+  url: null
+  uptime_target: null
+status_page:
+  url: null
+  evidence: 'percepto.statuspage.io resolves in DNS (13.33.109.124) but is NOT provisioned — both
+    https://percepto.statuspage.io/ and its /api/v2/status.json redirect to
+    https://www.atlassian.com/software/statuspage (the Statuspage product marketing page, HTTP 200,
+    127718 bytes). status.percepto.co and status.percepto.io are NXDOMAIN. Probed 2026-08-26. This
+    is the soft-404 pattern: a 200 that is not the provider''s status page.'
+changelog:
+  url: null
+  evidence: 'No dated product or API changelog. The nearest surfaces are the marketing news feed
+    (https://percepto.co/news/, HTTP 200) and blog (https://percepto.co/blog/, HTTP 200); neither
+    is an API changelog, so no ChangeLog pointer is emitted.'
+deprecated_operations: []

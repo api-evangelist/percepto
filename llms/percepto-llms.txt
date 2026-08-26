@@ -1,0 +1,64 @@
+# Percepto
+
+> Percepto is an Israeli-founded industrial autonomy company (founded 2014; Modi'in, Israel and
+> the United States) that builds drone-in-a-box hardware — the Percepto Air Max and Air Mobile
+> drones and the Percepto Base docking station — and Percepto AIM (Autonomous Inspection and
+> Monitoring), the software that plans and launches autonomous missions, ingests visual, thermal,
+> optical-gas-imaging and 3D data from Percepto drones as well as third-party DJI drones and fixed
+> cameras, and applies AI analytics for inspection, monitoring, emergency response and security at
+> oil and gas, mining, electric utility, solar, port and heavy-industry sites.
+
+## API surface
+
+Percepto publishes NO public API. There is no developer portal, no public API reference, no
+OpenAPI/AsyncAPI/GraphQL/gRPC/WSDL document, no SDK and no MCP server on any Percepto host.
+
+The Percepto AIM console at https://drones.percepto.co/ is a Django/Django-REST-Framework
+application that serves an HTTP API under /api/. Both machine-readable entry points exist but are
+customer-only: as of 2026-08-26, GET https://drones.percepto.co/api/schema/ and GET
+https://drones.percepto.co/api/docs/ each return HTTP 302 to /loginview/?next=..., while sibling
+paths (/api/, /api/v1/, /swagger.json, /redoc/, /graphql, /openapi.yaml) return the application's
+404 page. An agent cannot reach this API without Percepto customer credentials.
+
+- [Percepto AIM console (login)](https://drones.percepto.co/loginview/): the only reachable entry
+  point to the AIM API.
+
+## Company
+
+- [Website](https://percepto.co/)
+- [About](https://percepto.co/about/)
+- [Percepto AIM](https://percepto.co/aim/): the autonomous inspection and monitoring platform.
+- [Drone-in-a-box](https://percepto.co/drone-in-a-box/): Air Max, Air Mobile and Percepto Base.
+- [Blog](https://percepto.co/blog/)
+- [News](https://percepto.co/news/)
+- [Resources](https://percepto.co/resources/): brochures, case studies and survey reports.
+- [Contact](https://percepto.co/contact/)
+- [Book a demo](https://percepto.co/book-a-demo/): the commercial entry point; Percepto publishes
+  no pricing page.
+- [GitHub organization](https://github.com/perceptoDrones): three public repositories, none of
+  them an API client library.
+- [Privacy policy](https://percepto.co/privacy-policy/)
+
+## Security and compliance
+
+- [Data security statement](https://percepto.co/your-drone-inspection-data-is-secure/): Percepto
+  states it holds ISO 27001 certification and passed a SOC 2 Type II audit (Ernst & Young),
+  published 2023-07-31.
+- No /.well-known/security.txt (HTTP 404 on percepto.co and drones.percepto.co), no published
+  vulnerability disclosure policy, no bug bounty and no trust center were found.
+- Probed 2026-08-26: TLS 1.3 and HSTS on both hosts; SPF and DMARC (policy quarantine) on
+  percepto.co; CAA records present; no DNSSEC.
+
+## API Evangelist profile artifacts
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/percepto/refs/heads/main/apis.yml)
+- [Conformance](https://raw.githubusercontent.com/api-evangelist/percepto/refs/heads/main/conformance/percepto-conformance.yml)
+- [Lifecycle](https://raw.githubusercontent.com/api-evangelist/percepto/refs/heads/main/lifecycle/percepto-lifecycle.yml)
+- [Packages](https://raw.githubusercontent.com/api-evangelist/percepto/refs/heads/main/packages/percepto-packages.yml)
+- [Plans and pricing](https://raw.githubusercontent.com/api-evangelist/percepto/refs/heads/main/plans/percepto-plans-pricing.yml)
+- [Rate limits](https://raw.githubusercontent.com/api-evangelist/percepto/refs/heads/main/rate-limits/percepto-rate-limits.yml)
+- [Domain security](https://raw.githubusercontent.com/api-evangelist/percepto/refs/heads/main/security/percepto-domain-security.yml)
+- [Well-known probe](https://raw.githubusercontent.com/api-evangelist/percepto/refs/heads/main/well-known/percepto-well-known.yml)
+
+Generated 2026-08-26 by the API Evangelist enrichment pipeline. Percepto does not publish an
+llms.txt: https://percepto.co/llms.txt and https://drones.percepto.co/llms.txt both return HTTP 404.
