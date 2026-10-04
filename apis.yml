@@ -52,7 +52,7 @@ tags:
 - Robotics
 - Industrial Inspection
 - Autonomous Systems
-- Computer-Vision
+- Computer Vision
 - Asset Monitoring
 - Energy
 - Oil and Gas
@@ -71,6 +71,7 @@ tags_raw:
 - Mining
 - Utilities
 - Israel
+- Computer-Vision
 apis:
 - name: Percepto AIM API
   description: 'The HTTP API behind the Percepto AIM (Autonomous Inspection and Monitoring)
