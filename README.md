@@ -64,18 +64,101 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Percepto is an Israeli-founded industrial autonomy company (founded 2014; Modi'in, Israel and the
-United States) that builds drone-in-a-box hardware — the Percepto Air Max and Air Mobile drones and
-the Percepto Base docking station — and Percepto AIM (Autonomous Inspection and Monitoring), the
-software that plans and launches autonomous missions, ingests visual, thermal, optical-gas-imaging
-and 3D data from Percepto drones as well as third-party DJI drones and fixed cameras, and applies AI
-analytics for inspection, monitoring, emergency response and security at oil and gas, mining,
-electric utility, solar, port and heavy-industry sites.
+Percepto is an Israeli-founded industrial autonomy company (founded 2014, offices in Modi'in, Israel and the United States) that builds drone-in-a-box hardware and the software that runs it. Its hardware line includes the Percepto Air Max and Air Mobile drones and the Percepto Base docking station, and its software product is Percepto AIM (Autonomous Inspection and Monitoring), a platform that plans and launches autonomous missions, ingests visual, thermal, optical-gas-imaging and 3D data from Percepto drones as well as third-party DJI drones and fixed cameras, and applies AI-driven analytics to produce inspection, monitoring, emergency-response and security insights for oil and gas, mining, electric utilities, solar, ports and heavy industry sites. Percepto holds FAA beyond-visual-line-of-sight (BVLOS) authorizations for automated industrial inspections and has raised approximately $138.6M. The Percepto AIM console is served at drones.percepto.co and exposes an HTTP API under /api/, but the API schema and API documentation routes both redirect anonymous callers to a customer login: Percepto publishes no public developer portal, no OpenAPI document and no public API reference.
 
-Percepto publishes no public API. The Percepto AIM console at `drones.percepto.co` serves an HTTP API
-under `/api/`, but its schema and documentation routes are customer-only — as of 2026-08-26 both
-`/api/schema/` and `/api/docs/` return HTTP 302 to `/loginview/`.
+**Areas:** Drones · Robotics · Industrial Inspection · Autonomous Systems · Computer Vision · Asset Monitoring · Energy · Oil and Gas · Mining · Utilities · Israel
 
-- https://percepto.co/
-- https://drones.percepto.co/
-- https://github.com/perceptoDrones
+## Percepto on APIs.io
+
+Everything profiled for Percepto is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/percepto/](https://apis.io/providers/percepto/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Percepto AIM API](https://apis.io/apis/percepto/percepto-aim-api/) — The HTTP API behind the Percepto AIM (Autonomous Inspection and Monitoring) console at drones.percepto.co. The application is a Django/Django-REST-Framework…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Percepto Domain Security](https://apis.io/security/percepto/percepto-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Percepto Plans Pricing](https://apis.io/plans/percepto/percepto-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Percepto Rate Limits](https://apis.io/rate-limits/percepto/percepto-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://percepto.co/)
+- [Sign up](https://drones.percepto.co/loginview/)
+- [Support](https://percepto.co/contact/)
+- [Blog](https://percepto.co/blog/)
+- [Compliance](https://percepto.co/your-drone-inspection-data-is-secure/)
+- [Privacy policy](https://percepto.co/privacy-policy/)
+- [GitHub](https://github.com/perceptoDrones)
+
+## API Evangelist rating
+
+**Kin Score 17.9** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 31.6 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.4** — Energy & Utilities
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/percepto/](https://apis.io/providers/percepto/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Percepto: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/percepto/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
